@@ -7,11 +7,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./admin/admin.module').then((m) => m.AdminModule),
   },
-
   {
-    path: 'products',
+    path: 'parcels',
     loadChildren: () =>
-      import('./products/products.module').then((m) => m.ProductsModule),
+      import('./parcels/parcels.module').then((m) => m.ParcelsModule),
   },
 ];
 
