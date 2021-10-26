@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminModule } from './admin/admin.module';
 
 const routes: Routes = [
   {
@@ -11,6 +12,11 @@ const routes: Routes = [
     path: 'parcels',
     loadChildren: () =>
       import('./parcels/parcels.module').then((m) => m.ParcelsModule),
+  },
+  {
+    path: '',
+    redirectTo: './admin/admin.module',
+    pathMatch: 'full',
   },
 ];
 

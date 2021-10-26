@@ -1,1 +1,87 @@
-<p>edit-parcel works!</p>
+<div *ngIf="dataLoaded">
+  <mat-card>
+    <mat-card-title>Edit the Product</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="editProductForm" (submit)="editProduct()">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Tracking Number</mat-label>
+            <input
+              matInput
+              placeholder="Tracking Number"
+              formControlName="tracking_no"
+            />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Place of Booking</mat-label>
+            <input
+              matInput
+              placeholder="Place of Booking"
+              formControlName="place_of_booking"
+            />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>PO Box Number</mat-label>
+            <input
+              matInput
+              placeholder="PO Box Number"
+              formControlName="pobox_no"
+            />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>To</mat-label>
+            <input matInput placeholder="To" formControlName="to" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>From</mat-label>
+            <input matInput placeholder="From" formControlName="from" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Weight</mat-label>
+            <input matInput placeholder="Weight" formControlName="weight" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Amount</mat-label>
+            <input matInput placeholder="Amount" formControlName="amount" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Data & Time</mat-label>
+            <input
+              matInput
+              placeholder="Date & TIme"
+              formControlName="datetime"
+            />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <button mat-raised-button color="primary">Update</button>
+        </p>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

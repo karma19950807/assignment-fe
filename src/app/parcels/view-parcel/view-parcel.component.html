@@ -1,1 +1,12 @@
-<p>view-parcel works!</p>
+<mat-card class="product-data" *ngIf="productData">
+  <mat-card-title> Tracking No: {{ productData.tracking_no }} </mat-card-title>
+  <mat-card-subtitle class="view-content">
+    Place of Booking: {{ productData.place_of_booking }} <br />
+    PO Box No: {{ productData.pobox_no }} <br />
+    To: {{ productData.to }} <br />
+    From: {{ productData.from }} <br />
+    Weight: {{ productData.weight }}g<br />
+    Amount: Nu. {{ productData.amount }}<br />
+    DateTime: {{ productData.datatime }}
+  </mat-card-subtitle>
+</mat-card>

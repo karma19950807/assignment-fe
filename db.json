@@ -1,0 +1,46 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "fullname": "Karma Samdrup",
+      "email": "ksamdrup@gmail.com",
+      "phoneno": 17394885,
+      "location": "Thimphu GPO",
+      "username": "karma",
+      "password": "root@123"
+    },
+    {
+      "id": 2,
+      "fullname": "Sonam Tshering",
+      "email": "stshering@gmail.com",
+      "phoneno": "17344432",
+      "location": "Paro PO",
+      "username": "sonam",
+      "password": "rot@123"
+    },
+    {
+      "id": 3,
+      "fullname": "Sonam Penjor",
+      "email": "spenjor@gmail.com",
+      "phoneno": "172224567",
+      "location": "Samtse PO",
+      "username": "penjor",
+      "password": "root@123"
+    }
+  ],
+  "parcels": [
+    {
+      "id": 1,
+      "tracking_no": "ED000000001BT",
+      "place_of_booking": "Thimphu GPO",
+      "to": "Paro",
+      "from": "Thimphu",
+      "weight": 2400,
+      "amount": 115,
+      "datetime": ""
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

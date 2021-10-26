@@ -1,1 +1,163 @@
-<p>add-parcel works!</p>
+<mat-card>
+  <mat-card-title>Add New Product</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="addProductForm" (submit)="addParcel()">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Tracking Number</mat-label>
+          <input
+            matInput
+            placeholder="Tracking Number"
+            formControlName="tracking_no"
+          />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error
+            *ngIf="
+              addProductForm.controls['tracking_no'].errors &&
+              addProductForm.controls['tracking_no'].hasError('required')
+            "
+          >
+            Tracking number is requried
+          </mat-error>
+          <mat-error
+            *ngIf="
+              addProductForm.controls['tracking_no'].errors &&
+              addProductForm.controls['tracking_no'].hasError('minlength')
+            "
+          >
+            Tracking number should be 13 digits
+          </mat-error>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Place of Booking</mat-label>
+          <input
+            matInput
+            placeholder="Place of Booking"
+            formControlName="place_of_booking"
+          />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error
+            *ngIf="
+              addProductForm.controls['place_of_booking'].errors &&
+              addProductForm.controls['place_of_booking'].hasError('required')
+            "
+          >
+            Place of booking is requried
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>PO Box Number</mat-label>
+          <input
+            matInput
+            placeholder="PO Box Number"
+            formControlName="pobox_no"
+          />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error
+            *ngIf="
+              addProductForm.controls['pobox_no'].errors &&
+              addProductForm.controls['pobox_no'].hasError('required')
+            "
+          >
+            PO Box number is requried
+          </mat-error>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>To</mat-label>
+          <input matInput placeholder="To" formControlName="to" />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error
+            *ngIf="
+              addProductForm.controls['to'].errors &&
+              addProductForm.controls['to'].hasError('required')
+            "
+          >
+            To field is requried
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>From</mat-label>
+          <input matInput placeholder="From" formControlName="from" />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error
+            *ngIf="
+              addProductForm.controls['from'].errors &&
+              addProductForm.controls['from'].hasError('required')
+            "
+          >
+            From field is requried
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Weight</mat-label>
+          <input matInput placeholder="Weight" formControlName="weight" />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error
+            *ngIf="
+              addProductForm.controls['weight'].errors &&
+              addProductForm.controls['weight'].hasError('required')
+            "
+          >
+            Weight field is requried
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Amount</mat-label>
+          <input matInput placeholder="Amount" formControlName="amount" />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error
+            *ngIf="
+              addProductForm.controls['amount'].errors &&
+              addProductForm.controls['amount'].hasError('required')
+            "
+          >
+            Amount is requried
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Data & Time</mat-label>
+          <input
+            matInput
+            placeholder="Date & TIme"
+            formControlName="datetime"
+          />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error
+            *ngIf="
+              addProductForm.controls['datetime'].errors &&
+              addProductForm.controls['datetime'].hasError('required')
+            "
+          >
+            Date and time is requried
+          </mat-error>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="!addProductForm.valid"
+        >
+          Add
+        </button>
+      </p>
+    </form>
+  </mat-card-content>
+</mat-card>
